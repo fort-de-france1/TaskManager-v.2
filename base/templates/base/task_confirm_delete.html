@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block css_add %}
+<link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'tasks' %}">&#8592; Back</a>
+
+</div>
+
+<div class="card-body">
+    <form method="POST">
+        {% csrf_token %}
+        <p>Are your sure you want to delete this task? "{{ task }}"</p>
+        <input class="button" type="submit" value="Delete">
+    </form>
+
+</div>
+
+
+{% endblock %}

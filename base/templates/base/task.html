@@ -1,0 +1,10 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block css_add %}
+<link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Task: {{ task.title }}</h1>
+<h3>Descr: {{ task.description }}</h3>
+{% endblock %}
